@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> chimera website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 768px)">
+
+
+</head>
+<div class="main-content">
+<body>
+<div class="all-page">    
+      <div class="page">  
+    <header>
+        <h1>chimera</h1>
+    </header>
+
+    
+    <nav class="nav-page">
+        <ul>
+            <li><a href="/information.html">about & contact</a></li>
+            <li><a href="/story.html">storyboard</a></li>
+        <li><a href="/animation.html">key animation</a></li>
+            <li><a href="/design.html">design</a></li>
+        </ul>
+    </nav>
+
+<main> 
+<h2>character design</h2>
+<div>
+<div><h3> hiraeth </h3><center>
+<img class="design-image" src="https://64.media.tumblr.com/32527f59aec1437a9f34ce6b937c3cf9/ab6ade6ee5cb1193-ba/s1280x1920/d2c7246368e5198b6270f53e67781a55d3e61857.jpg" data-project="characterdesign-hiraeth" alt="character design - hiraeth"> </div>
+</center><div><h3> fold </h3><center>
+<img class="design-image" src="https://64.media.tumblr.com/f95b9ce9d29f355efaaa20a31c309dbc/3777ee6fb27c4448-9a/s1280x1920/b3ecd692d611992e81462cbe3bd324b129c1a698.jpg" data-project="characterdesign-fold" alt="character design - fold"> </div>
+</center>
+
+<div><h3> indiviual </h3><center>
+<img class="design-image" src="design/icon_cd-i_1.png" data-project="characterdesign-individual" alt="character design - individual"> </div>
+</center>
+
+<h2>concept art</h2>
+</center><div><h3> hiraeth </h3><center>
+<img class="design-image" src="https://64.media.tumblr.com/32527f59aec1437a9f34ce6b937c3cf9/ab6ade6ee5cb1193-ba/s1280x1920/d2c7246368e5198b6270f53e67781a55d3e61857.jpg" data-project="concept-hiraeth" alt="character design - hiraeth"> </div>
+</center><div><h3> fold </h3><center>
+<img class="design-image" src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:sfjy36y7wysopcmt5w4qpz2g/bafkreigymrivlcf6qelfcyzwh6yzrjonhatqr2ltwhn3ae2low5glekpsa@jpeg" data-project="concept-fold" alt="character design - fold"> </div>
+
+
+
+<!-- ライトボックス -->
+<div id="lightbox">
+    <div id="lightbox-container"></div> <!-- ここに画像を動的に追加 -->
+    <p id="lightbox-caption"></p> <!-- キャプション -->
+    <div class="lightbox-controls">
+        <button id="prev">&#8701;</button>
+        <button id="next">&#8702;</button>
+    </div>
+</div>
+
+<script>
+// 画像のグループ
+
+const projectImages = {
+ "characterdesign-individual": [
+     ["design/cd-i_1.png"],
+     ["works1-2.png"],
+     ["works1-3.png"],
+     ["works1-4.gif", "works1-5.gif"] // 2枚同時に表示
+ ],
+ "characterdesign-hiraeth": [
+     ["https://64.media.tumblr.com/c9df2323c303a102e6348fc493231bea/ef337c8576f71a4f-25/s1280x1920/4aa6a23924e2e4594bf0417b0b061bac4100358c.jpg"], 
+     ["https://64.media.tumblr.com/fa5f77972c286a2b7327df23c89e5cb9/af50fce9c2702f4b-9a/s1280x1920/3aed4e960a517858185b9418b1fb0939e310829c.jpg"],
+     ["https://64.media.tumblr.com/43ffab3a9c4f8f2f2e55c61147b847da/f470a609232d511c-88/s1280x1920/bfaf3a75d49a81e6f4448880a69ee05d59c92717.jpg", "https://64.media.tumblr.com/eeb27f102e915d6d5f229efb94fa646a/f470a609232d511c-95/s1280x1920/3740daaa952fe12966733ea5119575417d2a279a.jpg"] // 2枚同時に表示
+ ],
+ "characterdesign-fold": [
+     ["works3.png"],
+     ["works3-2.png"],
+     ["works3-3.png"]
+ ],
+ "concept-hiraeth": [
+     ["https://64.media.tumblr.com/4b33d3b64a8f4dfe04f78e640f70f6e7/529f3999ae50adf2-d1/s1280x1920/42b3134f92bc8b9461b3ff8481300fba790c4147.jpg"],
+     ["https://64.media.tumblr.com/fa31c1c49216f8444ae77392b43f308b/529f3999ae50adf2-3e/s1280x1920/4b50540a8d194e2101775574578fe143ca30fe00.jpg"],
+     ["works4-3.png"]
+ ],
+ "concept-fold": [
+     ["https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:sfjy36y7wysopcmt5w4qpz2g/bafkreicbcv5ahfxz43hkqxmjgmw7ccw63ka4izfcctmbadmzis5o4yhsua@jpeg"],
+     ["https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:sfjy36y7wysopcmt5w4qpz2g/bafkreigymrivlcf6qelfcyzwh6yzrjonhatqr2ltwhn3ae2low5glekpsa@jpeg"],
+     ["https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:sfjy36y7wysopcmt5w4qpz2g/bafkreicngnuunzah2mr2y3eowosun677zhw77i3a4rzv6p7plnq5en2fse@jpeg"],
+     [""]
+ ]
+};
+
+
+// キャプションのグループ（画像のセット数と一致させる）
+const projectCaptions = {
+ "characterdesign-individual": [
+     "1",
+     "2",
+     "3",
+     "4",
+ ],
+ "characterdesign-hiraeth": [
+     "hiraeth's ly",
+     "hiraeth's eel",
+     "hiraeth's mariette",
+ ],
+ "characterdesign-fold": [
+     "1",
+     "2",
+     "3",
+ ],
+ "concept-hiraeth": [
+     "1",
+     "2",
+     "3",
+
+ ],
+ "concept-fold": [
+     "1",
+     "2",
+     "3",
+
+ ]
+};
+    
+const lightbox = document.getElementById("lightbox");
+const lightboxContainer = document.getElementById("lightbox-container"); 
+const lightboxCaption = document.getElementById("lightbox-caption");
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
+
+let currentGroup = [];  // 現在表示中の画像リスト
+let currentCaptions = []; // 現在のキャプションリスト
+let currentIndex = 0;
+
+// 画像クリック時に対応するプロジェクトの画像を取得
+document.querySelectorAll(".design-image").forEach(img => {
+    img.addEventListener("click", () => {
+        const projectKey = img.dataset.project;
+        if (projectImages[projectKey]) {
+            currentGroup = projectImages[projectKey];
+            currentCaptions = projectCaptions[projectKey];
+
+
+            const clickedSrc = normalizePath(img.getAttribute("src"));
+
+
+            currentIndex = currentGroup.findIndex(set =>
+                set.some(src => pathsMatch(src, clickedSrc))
+            );
+
+            // Default to first if not found
+            if (currentIndex === -1) currentIndex = 0;
+
+            showLightbox();
+        }
+    });
+});
+
+// ✅ Normalize paths (convert \ to /, strip origin if absolute)
+function normalizePath(path) {
+    return path
+        .replace(/\\/g, "/")                 // backslashes → forward slashes
+        .replace(/^https?:\/\/[^/]+\//, "")  // remove domain if present
+        .replace(/^\.?\//, "");              // remove leading ./ or /
+}
+
+// ✅ Compare two paths while ignoring extra ./ or leading slashes
+function pathsMatch(a, b) {
+    return normalizePath(a) === normalizePath(b);
+}
+
+function showLightbox() {
+    lightboxContainer.innerHTML = ""; 
+    lightbox.style.display = "flex";
+
+    // Prevent errors if index is invalid
+    if (!currentGroup[currentIndex]) return;
+
+    currentGroup[currentIndex].forEach(src => {
+        let element;
+        if (src.endsWith(".ogg") || src.endsWith(".mp3") || src.endsWith(".wav")) {
+            element = document.createElement("audio");
+            element.controls = true;
+            element.src = src;
+        } else {
+            element = document.createElement("img");
+            element.src = src;
+            element.classList.add("lightbox-image");
+        }
+        lightboxContainer.appendChild(element);
+    });
+
+    lightboxCaption.textContent = currentCaptions[currentIndex] || "";
+}
+
+// 矢印ボタンで次のセットに切り替え
+prevButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    currentIndex = (currentIndex - 1 + currentGroup.length) % currentGroup.length;
+    showLightbox();
+});
+
+nextButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    currentIndex = (currentIndex + 1) % currentGroup.length;
+    showLightbox();
+});
+
+// クリックで閉じる
+lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = "none";
+    }
+});
+</script>  
+
+
+
+</main>
+
+    <footer>
+        <p>&copy; 2024 chimera. All rights reserved.</p>
+        <nav class="nav-social">
+            <ul>
+                <li><a href="https://instagram.com/chimera_o_ne" target="_blank">Instagram</a></li>
+                <li><a href="https://twitter.com/chimera735334" target="_blank">Twitter (personal)</a></li>
+                <li><a href="https://twitter.com/0quail" target="_blank">Twitter (commercial)</a></li>
+                <li><a href="mailto:small.autumn.isle@gmail.com">email</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+    </div>
+</div>  </div>  
+</body>
+
+</html>
