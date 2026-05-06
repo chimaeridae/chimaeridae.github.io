@@ -7,6 +7,12 @@
 
 /* --------------------------- */
 
+
+img {
+  image-rendering: crisp-edges;
+}
+
+
 .index-img {
 position: center;
 
@@ -133,7 +139,14 @@ main {
   
 }
 
-
+.index-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    align-items: center;
+  width: 100%;
+  height: 100%;
+}
 
 /* --------------------------- */
 
@@ -356,8 +369,6 @@ footer a:hover {
   backdrop-filter: invert(.8);
   color: #ededed;
 }
-
-
 
 
 
